@@ -7,7 +7,7 @@ import { username_context } from '../../App'
 import Loader from '../Loader/Loader'
 export default function RequsetSend() {
 	const {user_id}=React.useContext(username_context)
-	const {data,loading} =  Usefetch({url: `https://skill-api.penneithendral.workers.dev/requests/${user_id}`})
+	const {data,loading} =  Usefetch({url: `http://127.0.0.1:8787/requests/${user_id}`})
 	// const renderdata=data.results[0]
 	console.log(data,"===========")
 

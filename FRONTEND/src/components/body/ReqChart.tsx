@@ -35,7 +35,7 @@ export default function ReqChart({ name, skill, message, skill_id, requester_id 
 		}
 		console.log(sender)
 
-		fetch('https://skill-api.penneithendral.workers.dev/res', {
+		fetch('http://127.0.0.1:8787/res', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

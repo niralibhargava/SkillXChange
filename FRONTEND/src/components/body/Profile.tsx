@@ -27,7 +27,7 @@ export default function Profile() {
 	const [skilllist, setskilllist] = React.useState<string[]>([])
 
 
-	const { data } = useFetch({ url: `https://skill-api.penneithendral.workers.dev/getskills/${user_id}` })
+	const { data } = useFetch({ url: `http://127.0.0.1:8787/getskills/${user_id}` })
 
 	useEffect(() => {
 		setskilllist(data?.results.map((skill: skill_type) => skill.skill_name))
@@ -41,12 +41,12 @@ export default function Profile() {
 	function apicall(skill: string) {
 
 		console.log({ name: skill })
-		fetch('https://skill-api.penneithendral.workers.dev/skills', {
+		fetch('http://127.0.0.1:8787/user_skillsUI', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({ name: skill, user_id: user_id })
+			body: JSON.stringify({ skill, user_id })
 		}).then(res => res.json()).then(data => console.log(data))
 	}
 

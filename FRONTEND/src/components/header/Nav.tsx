@@ -28,7 +28,7 @@ export default function Nav() {
 	const { setSearchPerson } = useContext(userContext);
 	// const { Persons, filterPerson } = useContext(userContext);
 	// console.log(searchPerson)
-	const { data } = useFetch({ url: 'https://skill-api.penneithendral.workers.dev/getskills' })
+	const { data } = useFetch({ url: 'http://127.0.0.1:8787/getskills' })
 
 	console.log(data?.results);
 

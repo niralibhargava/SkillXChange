@@ -42,7 +42,7 @@ export default function ReqChart({ name, skill, skill_id, requester_id }: Requst
 
 		}
 		setremove(true)
-		fetch('https://skill-api.penneithendral.workers.dev/requests/respond', {
+		fetch('http://127.0.0.1:8787/requests/respond', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

@@ -14,8 +14,11 @@ export default function Home() {
 
 const{Persons,filterPerson,setPersons}=React.useContext(userContext)
 
-const {data,loading,error} =   useFetch({url:`https://skill-api.penneithendral.workers.dev/user_skills/${user_id}`})
+const {data,loading,error} =   useFetch({url:`http://127.0.0.1:8787/user_skills/${user_id}`})
 console.log("home",data)
+console.log("user_id", user_id);
+console.log("user_skills API response:", data);
+
 // setPersons(data?.data?.results)
  
   useEffect(()=>{ 
@@ -34,11 +37,8 @@ console.log(Persons,"asdf");
        <div className='box-border flex flex-col gap-4 m-3'>
 		
     <h2 className='flex flex-row justify-center w-full font-bold text-3xl text-white '>Person Details</h2>
-
         <div className='flex flex-row flex-wrap  max-md:mx-7 gap-6 justify-center' >
           {
-
-
         loading ?//array.map((item,index)=> <Loader key={index}/>)
            <div className='flex flex-col h-screen justify-center items-center'><Loader/></div> :  
         filterPerson?.map((person) => (
@@ -47,8 +47,6 @@ console.log(Persons,"asdf");
 }
         </div>
     </div>
-   
-    
 }   </>
   )
 
