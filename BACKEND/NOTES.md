@@ -19,6 +19,9 @@ database_id = "375d6370-0803-4335-ab28-1091a74f4613"
 
 -  npx wrangler d1 execute skillxchange-db --file=./Schema/schema.db.sql
 
+- npx wrangler d1 migrations apply skillxchange-db
+
+
 ✅ users table
 Stores user accounts.
 

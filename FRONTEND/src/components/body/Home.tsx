@@ -14,7 +14,7 @@ export default function Home() {
 
 const{Persons,filterPerson,setPersons}=React.useContext(userContext)
 
-const {data,loading,error} =   useFetch({url:`http://127.0.0.1:8787/user_skills/${user_id}`})
+const {data,loading,error} =   useFetch({url:`https://skill-api.skillxchange.workers.dev/user_skills/${user_id}`})
 console.log("home",data)
 console.log("user_id", user_id);
 console.log("user_skills API response:", data);

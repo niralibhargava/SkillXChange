@@ -1,5 +1,5 @@
 name = "skill-api"
-compatibility_date = "2023-12-01"
+compatibility_date = "2025-04-06"
 
 main = "src/index.ts"
 

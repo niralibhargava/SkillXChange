@@ -34,7 +34,7 @@ export default function PersonDetails({ name, rating, skills,skill_id,receiver_i
         }
         setdisabled(false)
         console.log(senddata)
-        fetch('http://127.0.0.1:8787/requests',{
+        fetch('https://skill-api.skillxchange.workers.dev/requests',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

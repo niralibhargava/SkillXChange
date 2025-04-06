@@ -35,7 +35,7 @@ export default function ReqChart({ name, skill, message, skill_id, requester_id 
 		}
 		console.log(sender)
 
-		fetch('http://127.0.0.1:8787/res', {
+		fetch('https://skill-api.skillxchange.workers.dev/res', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
