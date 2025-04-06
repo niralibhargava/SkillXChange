@@ -7,3 +7,11 @@ main = "src/index.ts"
 binding = "DB"
 database_name = "skillxchange-db"
 database_id = "375d6370-0803-4335-ab28-1091a74f4613"
+migrations_dir = "migrations"
+
+[env.production]
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "skillxchange-db"
+database_id = "375d6370-0803-4335-ab28-1091a74f4613"
+migrations_dir = "migrations"
